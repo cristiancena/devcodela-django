@@ -1,19 +1,19 @@
 #Curso de DJANGO de [devcode.la](http://www.devcode.la/)
 
 ####INSTALACION DE DJANGO
-	*	setup tools:
+*	setup tools:
 	`$ sudo apt-get install python-setuptools`
-	*	pip:
+*	pip:
 	`$ sudo easy_install pip`
-	*	virtual enviroment:
+*	virtual enviroment:
 	`$ pip install virtualenv`
-	*	crear un entorno virtual:
+*	crear un entorno virtual:
 	`$ virtualenv {nombre_del_entorno_virtual}`
-	*	activar un entorno virtual:
+*	activar un entorno virtual:
 	`$ source {nombre_del_entorno_virtual}/bin/activate`
-	*	instalar django (dentro de un entorno virtual):
+*	instalar django (dentro de un entorno virtual):
 	`(entorno_virtual)$ pip install django`
-	*	crear proyecto de django:
+*	crear proyecto de django:
 	`(entorno_virtual)$ django-admin.py startproject {nombre_proyecto}`
 
 
