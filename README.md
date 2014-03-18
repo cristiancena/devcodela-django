@@ -1,6 +1,6 @@
 #Curso de Django de [devcode.la](http://www.devcode.la/)
 
-##INSTALACION DE DJANGO
+###INSTALACION DE DJANGO
 +	setup tools:
 		`$ sudo apt-get install python-setuptools`
 +	pip:
@@ -17,7 +17,7 @@
 		`(entorno_virtual)$ django-admin.py startproject {nombre_proyecto}`
 
 
-##OPTIMO ENTORNO DE DESARROLLO
+###OPTIMO ENTORNO DE DESARROLLO
 +	Arrancamos el proyecto indicando otro archivo de configuracion:
 		`$ python manage.py runserver --settings=!SistemaDiscusiones.settings.local`
 +	Aunque a mi me andubo así: 
@@ -37,9 +37,9 @@
 			De este modo tendremos todas las dependencias para continuar con el proyecto en otro lado.
 
 
-##GIT EN DJANGO	
-	Todo proyecto de Django debe estar alojado en su propio virtualenv
-	Repo en github: 
+###GIT EN DJANGO	
+	+ Todo proyecto de Django debe estar alojado en su propio virtualenv
+	+ Repo en github: 
 		nombre: cristiancena/devcodela-django	
 		http:	https://github.com/cristiancena/devcodela-django.git
 		ssh: 	git@github.com:cristiancena/devcodela-django.git
@@ -54,8 +54,8 @@
 			Push an existing repository from the command line
 				git remote add origin git@github.com:cristiancena/devcodela-django.git
 				git push -u origin master
-	Como crear una clave publica para git:
+	+ Como crear una clave publica para git:
 		http://librosweb.es/pro_git/capitulo_4/generando_tu_clave_publica_ssh.html
 
-##DEPLOYMENT DE DJANGO EN HEROKU
+###DEPLOYMENT DE DJANGO EN HEROKU
 	
