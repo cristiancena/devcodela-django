@@ -1,0 +1,4 @@
+Django==1.6.2
+Unipath==1.0
+argparse==1.2.1
+wsgiref==0.1.2
