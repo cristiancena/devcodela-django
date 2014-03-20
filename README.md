@@ -90,3 +90,16 @@
 
 
 ####5 DISEÑO DE APLICACIONES
+	Las aplicaiones de django son librerías pequeñas diseñadas para representar un aspecto simple del proyecto. El proyecto esta formado por multiples aplicaciones.
+	El Third Party Packages son aplicaciones reusables de djago que podemos obtener del paquete de herramientas de python e instalarlas con pip dentro de nuestro entorno virtual (ej: south). 
+	creamos la carpeta {proyecto}/apps y dentro hacemos:
+	`django-admin.py startapp {nombre_de_la_aplicacion}` 
+	nombre_aplicacion
+		\__ __init__.py #es p q la carpeta se convierta en un modulo
+		\__ admin.py #cambios q tienen que ver con el administrador
+		\__ models.py #los modelos de la aplicación
+		\__ test.py #las pruebas unitarias
+		\__ views.py #las vistas de la aplicación
+	Todas las aplicaciones deben colocarse en la tupla LOCAL_APPS
+
+	quedamos en 04:00
