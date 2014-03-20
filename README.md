@@ -18,9 +18,7 @@
 
 
 ####3 OPTIMO ENTORNO DE DESARROLLO
-+	Arrancamos el proyecto indicando otro archivo de configuracion:
-	`$ python manage.py runserver --settings=!SistemaDiscusiones.settings.local`
-+	Aunque a mi me andubo así: 
++	Arrancamos el proyecto indicando otro archivo de configuracion: 
 	`$ python manage.py runserver --settings=SistemaDiscusiones.settings.local`
 +	El unipath es un paquete de python que nos ayuda en el manejo de rutas a directorios y a archivos:
 	* Vamos a la terminal, nos aseguramos que tenemos activo nuestro entorno virtual y tipeamos:
@@ -48,12 +46,47 @@
 	* para ello entramos en la db: `psql Discusiones`
 	* luego: `Discusiones=# ALTER USER cursodjango WITH PASSWORD 'pass';`
 + Llevamos estos datos de configuracion a nuestro settings de django (local.py)
-+ Instalamos el conector de python con postgres dentro del entorno virtual 'virtualenv_django:  
-	(virtualenv_django)➜  devcodela-django git:(master) ✗ `pip install pscopg2`
++ Instalamos el conector de python con postgres dentro del entorno virtual virtualenv_django:  
+	(virtualenv_django)➜  devcodela-django git:(master) ✗   
+		`pip install pscopg2`  
+		`pip freeze --local`  (Copiamos esta dependencia a requirements.txt)
++ Sincronizamos la DB `python manage.py syncdb --settings=SistemaDiscusiones.settings.local`
+	Nos pregunta si queremos crear un superusuario, le damos que si.
+	el usuario que aquí creamos es con el que ingresaremos en el admin
++ Verificamos las tablas que se han creado en la db:  
+	`su postgres`  
+	postgres@chicha:/home/chicha$ `psql Discusiones`  
+	`Discusiones=# \d`  
+	Con `\q` salimos
 
+#####
+	List of relations
+	 Schema |               Name                |   Type   |    Owner    
+	--------+-----------------------------------+----------+-------------
+	 public | auth_group                        | table    | cursodjango
+	 public | auth_group_id_seq                 | sequence | cursodjango
+	 public | auth_group_permissions            | table    | cursodjango
+	 public | auth_group_permissions_id_seq     | sequence | cursodjango
+	 public | auth_permission                   | table    | cursodjango
+	 public | auth_permission_id_seq            | sequence | cursodjango
+	 public | auth_user                         | table    | cursodjango
+	 public | auth_user_groups                  | table    | cursodjango
+	 public | auth_user_groups_id_seq           | sequence | cursodjango
+	 public | auth_user_id_seq                  | sequence | cursodjango
+	 public | auth_user_user_permissions        | table    | cursodjango
+	 public | auth_user_user_permissions_id_seq | sequence | cursodjango
+	 public | django_admin_log                  | table    | cursodjango
+	 public | django_admin_log_id_seq           | sequence | cursodjango
+	 public | django_content_type               | table    | cursodjango
+	 public | django_content_type_id_seq        | sequence | cursodjango
+	 public | django_session                    | table    | cursodjango
+	(17 rows)
 
-quedamos en 5:00
-
++ Instalamos South: Cuando modificamos los modelos de django toca modificar las tablas a mano, y esto es un bajón, pero se soluciona con south, que hace todo por nosotros:
+	`pip install south` 
++ llevamos esta nueva dependencia al archivo de requeriments base.txt
+	`pip freeze --local`
++ Sincronizamos la db, para generar la tabla de migraciones que trae south
 
 
 ####5 DISEÑO DE APLICACIONES

@@ -12,8 +12,8 @@ DATABASES = {
         #'NAME': Path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE' 	: 'django.db.backends.postgresql_psycopg2',
         'NAME' 		: 'Discusiones',
-        'USER' 		: 'cursodjango'
-        'PASSWORD' 	: 'pass'
+        'USER' 		: 'cursodjango',
+        'PASSWORD' 	: 'pass',
         'HOST' 		: 'localhost',
         'PORT' 		: '5432' #default port of postgres
     }

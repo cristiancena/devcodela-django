@@ -12,7 +12,9 @@ DJANGO_APPS = ( #aplicaciones de django
     'django.contrib.staticfiles',
 )
 
-THIRD_PARTY_APPS = () #Aplicaciones de terceros
+THIRD_PARTY_APPS = ( #Aplicaciones de terceros
+    'south',
+) 
 
 LOCAL_APPS = () #Aplicaciones locales
 
