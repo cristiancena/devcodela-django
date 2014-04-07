@@ -102,4 +102,77 @@
 		\__ views.py #las vistas de la aplicación
 	Todas las aplicaciones deben colocarse en la tupla LOCAL_APPS
 
-	quedamos en 04:00
+####6 VISTAS Y URLS: Una vista no es nada sin una url que la enlace
+	Vistas genéricas: Cada una realiza una tarea en especifico.
+		- View: Es la clase padre de todas las vistas genéricas.
+				Implementa solo métodos HTTP: get, post, put, delete 
+		- TemplateView: Es una vista que renderiza un template y que pasa en 
+						el contexto cualquier argumento que pase por url
+		- CreateView: 	Crea una instancia de un objeto con una respuesta 
+						renderisaza al template
+		- DetailView: renderiza el detalle de un solo objeto, por defecto toma 
+						la instancia del modelo que se le asigne
+		- DeleteView: Elimina un objeto y renderiza una respuesta al template
+		- UpdateView: Lo mismo pero para actualizar un objeto
+		- ListView: renderiza un listado de objetos asignados en el attr model 
+					o en el attr queryset
+		- 
+	Vistas basadas en clases: 
+		Si una vista generica se acerca mucho a lo que queremos realizar y debemos sobreescribir los atributos y métodos que estas nos dan. Si este es el caso, se debe usar una vista basada en clases. Las vistas basadas en clases heredan las funcionalidades de las vistas genericas de django.
+		Ej de url:
+			url(r'^django/$' , IndexView.as_view()), 
+	Vistas basadas en funciones: 
+		Se usa para cuando queremos hacer algo muy complejo de implementar en una vista basada en clases. Por ejemplo cuando queremos procesar mas de un formulario en una sola vista.
+		Ej de url: 
+			url(r'^django/$' , 'apps.home.views.index'),
+
+	El atributo name: 
+		toda url lo tiene, el name le da un nombre a la url para poder llamarla por dicho nombre. 
+	Los namespaces: 
+		Cuando tenemos muchas aplicaciones es comun que entre ellas haya urls con los mismos nombres. 
+		Cada aplicacion debe tener su propio archivo de urls ya que django tiene su propio archivo de urls (el archivo principal digamos) en la carpeta del proyecto donde se deben incluir los anteriores. 
+		
+
+####7 MOTOR DE TEMPLATES DE DJANGO
+	La vista le manda la informacion a un template apoyandose en los shortcuts de django, en este caso usamos el shortcut render
+	render recibe como parametro un contexto, un template y la informacion que se enviara a ese template en forma de diccionario y devuelve una respuesta
+	Django lee la variable TEMPLATE_DIRS alojada en base.py para saber donde tenemos alojados nuestros templates 
+	El contexto (context) es toda informacion que envia una vista a un template en forma de diccionario.
+	Procesadores de contexto (context processors): Son funciones que retornan un diccionario, el cual se envia a todos los templates que tengamos sin necesidad de repetir el codigo. Estos nacen ante la necesidad de enviar la misma información a diferentes templates.
+	Los procesadores de contexto que vienen por defecto y que más usaremos son:
+		auth: para autentificar usuarios
+		media: nos envia la variable media_url para poder enlazar las imagenes que se suban al servidor.
+		static: nos envia la variable static_url para enlazar los archivos estaticos.
+		tz: es el time zone y nos trae la hora actual 
+	Logica en los Templates:
+	variables: 	{{ person_name }} 	Las enviamos en la vista como diccionario
+	tag/etiquetas: 	{% tag %} 
+		El tag {% for objeto in diccionario %} sirve para recorrer una lista de objetos
+		El tag {% if %} el condicional de toda la vida
+
+	Herencia de templates: Permite construir un template base que contenga todos los elementos comunes en donde definimos bloques que podran ser sobreescritos sobre los tamplates hijos
+
+####8 ARCHIVOS ESTÁTICOS
+	Archivos estáticos son: Imagenes, files.js, files.css, etc.
+	En django cada aplicacion puede tener sus propios archivos estáticos
+	La variable STATICFILES_DIRS solo se usa en un ambiente local por lo tanto esta dentro de local.py ya que en un entorno de produccion nunca debemos servir los archivos estáticos en el mismo servidor donde tengamos nuestro proyecto de django.
+	
+	La manera correcta de cargar los archivos estáticos es usando el template-tag "load static" 
+		{% load static from staticfiles%}
+		<link rel="stylesheet" href="{% static "estilos.css" %}">
+	Lo que hace es cargar todos los archivos estaticos de una manera dinamica desde los staticfiles.
+	Para un entorno local el Debug siempre debe estar en true y para produccion debemos cambiarlo a false
+
+	Como tratar los archivos estaticos en un entorno de produccion?
+	STATIC_ROOT es una variable donde indicamos donde queremos coleccionar todos los archivos estaticos del proyecto
+
+
+####9 CUSTOM USER MODEL: Modelo de usuarios personalizado
+
+
+
+
+
+
+
+

@@ -8,18 +8,18 @@
 	"buffers":
 	[
 		{
-			"file": "SistemaDiscusiones/manage.py",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 261,
+				"buffer_size": 7553,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/chicha/Descargas/conky_harmattan/README/Installation+Description",
+			"contents": "\npara conseguir un equilibrio entre el nivel de canal de los grupos y del bus del master se \ndebe dejar el bus del master en 0dB y proteger la salida con un limitador de pared contra\nlos eventuales picos de nivel.\nDebemos ajustar el valor del umbral a 0.3dB en el vst limitador\nInsertar el limitador en el punto de insercion 7 de cubase ya q este punto actua luego del fader de volumen y el punto 8 queda reservado para un dittering final en potencia (UV22hr)\nControlar que el limitador no corte mas de 1 o 2 decibelios de los eventuales picos ya que una limitacion excesiva puede empeorar el sonido, para est debemos reducir los niveles de los canales de grupo\n\nPlugins vst: \n	Limitador: UAD Precision Limiter\n	Limitador de pared: BrickWall Limiter md3 (paoaccord o algo asi)\n\nMezclar primero los instrumentos de armonia base al grupo de bateria con bajo\ny despues el grupo de vos solista en el nivel a ajustar\npor ultimo se añaden los adornos: percusion, efectos, rellenos, instrumentos menos importantes\n\npara determinar la relacion de la caja y el bombo es de ayuda un picometro RTW o similar.\nDependiendo del estilo debemos proporcionar la misma energía al bombo y a la caja.\nTambien puede ayudarnos un analizador de espectro para ver esto.\n\nDimensionamiento del nivel sonoro\n	El corazon de cualquier compresor es el UVCA o amplificador controlado por voltaje\n	\n	En el plugin UAD 1176LN\n		el ataque funciona al reves: potenciometro a la izquierda es igual a tiempo de \n		ataque largo y a la derecha tiempo de ataque corto\n\nSonidos fugaces: Para resaltarlos podemos usar el compresor Transient Modulator de Sony Oxford",
 			"settings":
 			{
-				"buffer_size": 6921,
+				"buffer_size": 1622,
 				"line_ending": "Unix"
 			}
 		}
@@ -31,11 +31,23 @@
 		"selected_items":
 		[
 			[
-				"instal",
-				"Package Control: Install Package"
+				"",
+				"About"
+			],
+			[
+				"schemes",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"selector",
+				"ColorSchemeSelector: Select Color Scheme"
 			],
 			[
 				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
 				"Package Control: Install Package"
 			],
 			[
@@ -55,7 +67,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 629.0
+		"width": 395.0
 	},
 	"console":
 	{
@@ -77,13 +89,24 @@
 	},
 	"file_history":
 	[
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/SistemaDiscusiones/urls.py",
+		"/home/chicha/devs/devcodela-django/EXTRAS.md",
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/SistemaDiscusiones/settings/base.py",
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/SistemaDiscusiones/settings/local.py",
+		"/home/chicha/devs/devcodela-django/README.md",
+		"/home/chicha/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
+		"/home/chicha/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/chicha/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/apps/__init__.py",
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/requeriments/base.txt",
+		"/home/chicha/devs/devcodela-django/SistemaDiscusiones/requeriments.txt",
+		"/home/chicha/devs/devcodela-django/.gitignore",
+		"/home/chicha/Descargas/Contraseña para descomprimir.txt",
+		"/home/chicha/Descargas/conky_harmattan/README/Installation+Description",
 		"/home/chicha/Descargas/conky_harmattan/README/Troubleshooting",
 		"/home/chicha/Descargas/conky_harmattan/README/For Tweakers",
 		"/home/chicha/Descargas/conky_harmattan/README/Credits",
 		"/home/chicha/Descargas/conky_harmattan/README/Contributing",
-		"/home/chicha/Descargas/conky_harmattan/README/Installation+Description",
-		"/home/chicha/devs/devcodela-django/README.md",
-		"/home/chicha/devs/devcodela-django/.gitignore",
 		"/home/chicha/devs/devcodela-backbone/.gintignore",
 		"/home/chicha/devs/devcodela-backbone/applibreria/public/practica.js",
 		"/home/chicha/devs/devcodela-backbone/README.md",
@@ -91,8 +114,6 @@
 		"/home/chicha/devs/cursos_devcodela/README.md",
 		"/home/chicha/devs/cursos_devcodela/responsive_design/mqueries.html",
 		"/home/chicha/devs/cursos_devcodela/responsive_design/index.html",
-		"/home/chicha/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/chicha/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/chicha/.config/sublime-text-3/Packages/View In Browser/View In Browser.sublime-settings",
 		"/home/chicha/.config/sublime-text-3/Packages/User/View In Browser.sublime-settings",
 		"/home/chicha/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
@@ -115,7 +136,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -129,6 +150,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'1','2",
+			"['",
+			"3",
+			"']",
+			"','",
 			"theme"
 		],
 		"highlight": true,
@@ -152,19 +178,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "SistemaDiscusiones/manage.py",
-					"semi_transient": true,
+					"file": "README.md",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 261,
+						"buffer_size": 7553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								7537,
+								7537
 							]
 						],
 						"settings":
@@ -172,54 +198,55 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
-								"bh_regex_close"
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close"
 							],
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3501.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -227,74 +254,72 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/chicha/Descargas/conky_harmattan/README/Installation+Description",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6921,
+						"buffer_size": 1622,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1622,
+								1622
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_name": "",
 							"bh_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
-								"bh_regex_close"
+								"bh_regex_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
 							],
 							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 374.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -9,14 +9,17 @@ DJANGO_APPS = ( #aplicaciones de django
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', #busca los archivos estaticos dentro del directorio declarado en STATIC_URL 
+                                  #recopilas los static files de todas las aplicaciones en una unica ubicacion
 )
 
 THIRD_PARTY_APPS = ( #Aplicaciones de terceros
     'south',
 ) 
 
-LOCAL_APPS = () #Aplicaciones locales
+LOCAL_APPS = ( #Aplicaciones que creamos nosotros
+    'apps.home',
+) 
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

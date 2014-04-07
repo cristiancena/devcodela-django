@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %} Devask | Devcode.la{% endblock %}
+
+{% block content %}
+<div class="container">
+                <div class="row cab">
+                        <div class="col-md-8 contenido-bienvenida">
+                                <div class="jumbotron jumbotron-customize">
+                                  <h1>Bienvenidos a DevAsk!</h1>
+                                  <p class="subtitulo-jumbotron">El Sistema de Discusiones para Programadores</p>
+                                        <p>
+                                                <a href="preguntas/ask/"><button type="button" class="btn btn-primary btn-lg btn-pregunta">Has tu Pregunta!</button></a>
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="col-md-4 login">
+                                <h3>Conectate con:</h3>
+                                <p>
+                                  <button type="button" class="btn btn-primary btn-lg btn-lg-customize-fb"><span class="icon-facebook"></span>Facebook</button>
+                                  <button type="button" class="btn btn-primary btn-lg btn-lg-customize-tw"><span class="icon-twitter"></span>Twitter</button>
+                                </p>
+                        </div>
+                </div>
+
+                <div class="row">
+                        <div class="col-md-8 contenido">
+                                <ul class="nav nav-pills">
+                                  <li class="top">
+                                    <a href="#">
+                                      Top 5 de Preguntas:
+                                    </a>
+                                  </li>
+                                  <li >
+                                    <a href="#">
+                                      <span class="badge pull-right badge-customize">42</span>
+                                      Preguntas
+                                    </a>
+                                  </li>
+                                  <li >
+                                    <a href="#">
+                                      <span class="badge pull-right badge-customize">1004</span>
+                                      Usuarios
+                                    </a>
+                                  </li>
+                                  <li >
+                                    <a href="#">
+                                      <span class="badge pull-right badge-customize">42</span>
+                                      Home
+                                    </a>
+                                  </li>
+                                </ul>
+
+                                <h4>¿Por qué me sale un error en la instalación Django en windows? <small>@Djeancar</small><span><img src="{{STATIC_URL}}img/djeancar.jpg" class="foto-perfil"></span></h4>
+                                <blockquote class="bloquesito">
+                                  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
+                                  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
+                                  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
+                                  <p class="bg-success bg-fecha-customize">Publicado hace: <span>30 min</span></p>
+                                  <p class="tags">
+                                        <span>Etiquetas:</span>
+                                        <button type="button" class="btn btn-default btn-xs">Django 1.5</button>
+                                        <button type="button" class="btn btn-default btn-xs">Django 1.6</button>
+                                        <button type="button" class="btn btn-default btn-xs">Node</button>
+                                  </p>
+                                </blockquote>
+
+                                <h4>¿Por qué me sale Error 500 en Django? <small>@Jhonazsh</small><span><img src="{{STATIC_URL}}img/jhonazsh.jpg" class="foto-perfil"></span></h4>
+                                <blockquote class="bloquesito">
+                                  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
+                                  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
+                                  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
+                                  <p class="bg-success bg-fecha-customize">Publicado hace: <span>3 hr</span></p>
+                                  <p class="tags">
+                                        <span>Etiquetas:</span> 
+                                        <button type="button" class="btn btn-default btn-xs">Node</button>
+                                        <button type="button" class="btn btn-default btn-xs">Django 1.6</button>
+                                  </p>
+                                </blockquote>
+
+                                <h4>¿Que es mejor Vistas basadas en clases o vistas basadas en funciones? <small>@Edwinpgm</small><span><img src="{{STATIC_URL}}img/edwinpgm.jpg" class="foto-perfil"></span></h4>
+                                <blockquote class="bloquesito">
+                                  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
+                                  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
+                                  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
+                                  <p class="bg-success bg-fecha-customize">Publicado hace: <span>4 hr</span></p>
+                                  <p class="tags">
+                                        <span>Etiquetas:</span>
+                                        <button type="button" class="btn btn-default btn-xs">VBC</button>
+                                        <button type="button" class="btn btn-default btn-xs">VBF</button>
+                                  </p>
+                                </blockquote>
+
+                                <h4>¿Como usar multisettings de django en un proyecto? <small>@Mayraisav</small><span><img src="{{STATIC_URL}}img/myraisav.jpg" class="foto-perfil"></span></h4>
+                                <blockquote class="bloquesito">
+                                  <p class="bg-info bg-info-customize">Vistos <span>0</span></p>
+                                  <p class="bg-warning bg-info-customize">Respuestas <span>0</span></p>
+                                  <p class="bg-success bg-info-customize">Votos <span>0</span></p>
+                                  <p class="bg-success bg-fecha-customize">Publicado hace: <span>15 hr</span></p>
+                                  <p class="tags">
+                                        <span>Etiquetas:</span>
+                                        <button type="button" class="btn btn-default btn-xs">Django 1.6</button>
+                                  </p>
+                                </blockquote>
+                                
+                        </div>
+                        <div class="col-md-4 contenido-aside" >
+                                
+                        </div>
+                </div>
+                
+        </div>
+
+{% endblock %}
