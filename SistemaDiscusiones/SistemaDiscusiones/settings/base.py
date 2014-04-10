@@ -15,10 +15,12 @@ DJANGO_APPS = ( #aplicaciones de django
 
 THIRD_PARTY_APPS = ( #Aplicaciones de terceros
     'south',
+    'social.apps.django_app.default',  
 ) 
 
 LOCAL_APPS = ( #Aplicaciones que creamos nosotros
     'apps.home',
+    'apps.users',
 ) 
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -47,3 +49,12 @@ USE_L10N = True
 USE_TZ = True
 
 TEMPLATE_DIRS = [BASE_DIR.child('templates')] #donde van a estar alojados los html del proyecto
+
+AUTH_USER_MODEL = 'users.User' #con esto le decimos a django que modelo de usuarios personalizado vamos a utilizar
+
+AUTHENTICATION_BACKENDS = ( #los tipos de autentificacion que vamos a utilizar
+        'social.backends.facebook.FacebookAppOAuth2',
+        'social.backends.facebook.FacebookOAuth2',
+        'social.backends.twitter.TwitterOAuth2',
+        'django.contrib.auth.backends.ModelBackend',
+    )

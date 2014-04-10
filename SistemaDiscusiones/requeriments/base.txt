@@ -2,3 +2,5 @@ Django==1.6.2
 South==0.8.4
 Unipath==1.0
 psycopg2==2.5.2
+python-social-auth==0.1.23
+python-openid==2.2.5

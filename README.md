@@ -168,7 +168,38 @@
 
 
 ####9 CUSTOM USER MODEL: Modelo de usuarios personalizado
+	El custom user model nos permite personalizar el modelo de usuarios que django trae por defecto. Personalizar el modelo de usuarios que django trae por defecto conlleva tambien a personalizar la administracion y la autentifición. Para lo cual debemos usar 2 clases abstractas y 1 mixin de permisos:
+		AbstractBaseUser: Sirve p crear nuestro modelo de usuarios
+		BaseUserManager: Sirve para crear el administrador del modelo
+		Permission mixin: Sirve para dar permisos a nuestros usuarios
+	
+	Creamos nuestro propio modelo de usuarios personalizado:
+		1 creamos una app para los usuarios. En root/apps:
+			$ django-admin.py startapp users
+			y declaramos la app en LOCAL_APPS de  base.py 
+		2 creamos el modelo en models.py dentro de nuestra app users
+		3 Creamos el manager o administrador
+			El attr objects de un modelo es un intermediario entre las transacciones de cada modelo. Ej: model.objects.all() trae todos los objetos de ese modelo. objects es el manager que tiene cada modelo.
+		4 Sincronizamos la base de datos
+			python manage.py syncdb --settings=SistemaDiscusiones.settings.local
+		5 creamos una migracion: Siempre es bueno tener la migracion al inicio 
+			de la aplicacion, sino despues podemos tener muchos problemas.
+			--initial: xq es la migracion inicial
+			python manage.py schemamigration users --initial --settings=SistemaDiscusiones.settings.local
+		6 Aplicamos la migracion:	
+			--fake: xq hacemos una migracion falsa. Esto se debe a que creamos la tabla usando syncdb, siempre que hagamos esto se debe crear una migracion falsa. Otro escenario es crear las tablas solo usando las migraciones prescindiendo de syncdb
+			python manage.py migrate --fake users --settings=SistemaDiscusiones.settings.local
 
+
+####10 Social login auth
+	Usamos la libreria *python social auth* que no solo permite autentificación sino tambien asociar múltiples cuentas de redes sociales a una sola cuenta de usuario
+	root-del-proyecto: 	$ pip install python-social-auth
+						$ pip freeze --local
+	copiamos python-social-auth==0.1.23 y lo pegamos en base.txt del directorio requeriments
+	tambien la declaramos en THIRD_PARTY_APPS en base.py como:
+	'social.apps.django_app.default',
+	sincronizamos la base de datos:
+	python manage.py syncdb --settings=SistemaDiscusiones.settings.local
 
 
 
